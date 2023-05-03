@@ -1,0 +1,363 @@
+body {
+  background-color: rgba(238, 238, 238, 255);
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto Slab", serif;
+}
+
+.body_wraper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.container {
+  display: flex;
+}
+
+/*Левый блок*/
+
+.left_container {
+  width: 8%;
+  height: 100vh;
+  border-right: solid 4px rgba(125, 125, 125, 255);
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.logo_main {
+  position: absolute;
+  top: 8%;
+  margin: 0 auto;
+  display: flex;
+
+  animation-name: logo;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+}
+
+@keyframes logo {
+  from {
+    top: 8%;
+  }
+  to {
+    top: 20%;
+  }
+}
+
+.logo_main-png {
+  margin: 0 auto;
+  display: flex;
+  width: 50%;
+}
+
+.contacts {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  top: 80%;
+  align-items: center;
+}
+
+.fb,
+.inst,
+.yt {
+  margin-top: 70%;
+}
+
+svg {
+  width: 25px;
+}
+
+.facebook {
+  height: 25px;
+}
+
+/*Правый блок*/
+.content {
+  width: 100%;
+  position: relative;
+}
+
+/*Меню*/
+.menu {
+  display: flex;
+  justify-content: right;
+  margin-right: 10%;
+}
+
+.nav_menu {
+  display: flex;
+
+  padding-top: 35px;
+  color: rgba(126, 126, 126, 255);
+}
+
+/*Мобильное меню*/
+.nav_mobile {
+  display: none;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.nav_mobile span {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #525252;
+  left: 5px;
+  transition: transform 0.4s, opacity 0.3s, background-color 0.3s;
+}
+
+.nav_mobile span:nth-child(1) {
+  transform: translateY(-10px);
+}
+.nav_mobile span:nth-child(2) {
+}
+.nav_mobile span:nth-child(3) {
+  transform: translateY(10px);
+}
+
+/*Крестик*/
+.menu.open .nav_mobile span {
+  background-color: #e7e3d9;
+}
+.menu.open .nav_mobile span:nth-child(1) {
+  transform: translateY(0) rotate(45deg);
+}
+.menu.open .nav_mobile span:nth-child(2) {
+  opacity: 0;
+}
+.menu.open .nav_mobile span:nth-child(3) {
+  transform: translateY(0) rotate(-45deg);
+}
+
+.nav_list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  align-items: center;
+}
+
+li {
+  display: flex;
+}
+.nav_button {
+  margin-right: 70px;
+  display: flex;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: rgba(126, 126, 126, 255);
+}
+.btn_nav {
+  margin-right: 0;
+  padding: 10px;
+
+  background-color: rgba(233, 220, 166, 250);
+  align-items: center;
+}
+
+/*Дата*/
+.date {
+  position: absolute;
+  right: 3.5%;
+  display: inline-block;
+  box-sizing: content-box;
+}
+
+.date span {
+  font-size: calc(10px + 1.2vw);
+  color: #525252;
+  font-weight: 900;
+  font-family: "Frank Ruhl Libre";
+  border-top: solid 3px rgb(139, 169, 105);
+  border-bottom: solid 3px rgb(139, 169, 105);
+}
+
+.info {
+  width: 40%;
+  height: 100%;
+  display: block;
+}
+/*Заголовок*/
+.title {
+  margin-left: 4%;
+}
+
+h1 {
+  font-size: calc(30px + 5vw);
+  line-height: 75%;
+  color: #8ba969;
+  font-weight: 900;
+  font-family: "Frank Ruhl Libre";
+}
+
+.text {
+  margin-left: 4%;
+}
+
+.subtitle {
+  font-size: calc(10px + 1.7vw);
+  font-family: "Josefin Slab";
+
+  color: #525252;
+  background-color: #e7e3d9;
+  padding: 0 15px;
+}
+
+.subtext {
+  margin-left: 4%;
+}
+
+.body_text {
+  color: #525252;
+  font-family: "Josefin Slab";
+  font-size: calc(6px + 1.3vw);
+}
+
+/*Кнопки*/
+.button_text {
+  display: flex;
+  margin-left: 4%;
+}
+
+.button_text a {
+  text-decoration: none;
+  font-family: "Josefin Slab";
+  font-size: calc(7px + 1vw);
+  background-color: #8ba969;
+  color: #e7e3d9;
+  padding: 3px 8px;
+}
+
+.button_text a:last-child {
+  color: #525252;
+  background-color: #eeeeee;
+  margin-left: 15%;
+}
+
+.image {
+  display: grid;
+  width: calc(70px + 20vw);
+  height: calc(70px + 20vw);
+  border-radius: calc(35px + 10vw);
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  background-color: #e7e3d9;
+}
+
+.flower {
+  position: absolute;
+  width: 65%;
+  left: 35%;
+}
+
+.leaf {
+  position: absolute;
+  width: calc(15px + 2vw);
+  left: -6%;
+  top: 40%;
+}
+.plant {
+  top: 26%;
+  left: -20%;
+  position: absolute;
+  width: calc(35px + 7vw);
+}
+
+.square {
+  position: absolute;
+  right: 4%;
+  top: 45%;
+}
+
+.square1 {
+  width: calc(10px + 2vw);
+  height: calc(10px + 3vw);
+  background-color: #b9e18c;
+}
+
+.square2 {
+  width: calc(10px + 2vw);
+  height: calc(10px + 3vw);
+  background-color: #a2c67a;
+}
+
+.square3 {
+  width: calc(10px + 2vw);
+  height: calc(10px + 3vw);
+  background-color: #8ba969;
+}
+
+.footer {
+  color: #525252;
+  font-family: "Frank Ruhl Libre";
+  font-size: calc(10px + 1.2vw);
+  font-weight: 800;
+  line-height: 30px;
+  
+  position: absolute;
+  right: 60px;
+  top: 85%;
+}
+
+.footer::marker {
+  font-size: 1.2em;
+}
+
+@media (max-width: 992px) {
+  .menu {
+    margin-right: 0;
+  }
+
+  .nav_mobile {
+    display: block;
+  }
+
+  .nav_list {
+    position: absolute;
+    right: -150px;
+    top: 0;
+    background-color: #8ba969c4;
+    width: 150px;
+    display: block;
+    z-index: 1;
+    padding: 50px 0px 0 0;
+    visibility: hidden;
+    transition: transform 0.5s, visibility 0.5s;
+  }
+
+  .nav_button {
+    color: #e7e3d9;
+    font-size: 18px;
+    padding: 10px 0;
+    margin-left: 10px;
+    z-index: 2;
+    margin-bottom: 10px;
+  }
+
+  .btn_nav {
+    padding: 0 5px;
+  }
+
+  .menu.open .nav_list {
+    transform: translateX(-100%);
+    visibility: visible;
+  }
+
+  .date {
+    left: 4%;
+  }
+}
